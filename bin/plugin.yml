@@ -1,0 +1,15 @@
+name: Points_By_Metype
+version: 1.0
+author: Metype
+main: mc.points.metype.Main
+description: A Points plugin that allows for the earning of points via playtime.
+
+commands:
+  points:
+    description: Opens the menu to purchase items with points if a menu.yml is properly set up
+  setpoints:
+    description: Sets a user's point balance, requires points.setpoints permission to use
+  getpoints:
+    description: Gets a user's point balance, requires points.getpoints permission to use
+  givepoints:
+    description: Guves a user points (not from executor's balance), requires points.givepoints permission to use

@@ -1,0 +1,8 @@
+name: Points
+version: '${project.version}'
+main: mc.metype.points.Points
+api-version: 1.19
+prefix: Points
+depend: [PlaceholderAPI]
+authors: [ Metype ]
+description: Points is a simple plugin that allows users to earn points for their playtime and use said points to buy items in a store, such as ranks, blocks, and shoutouts, whatever you want.

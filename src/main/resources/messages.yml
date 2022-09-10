@@ -1,0 +1,8 @@
+info:
+  test: "This is an informational message."
+warning:
+  test: "This is a warning message."
+error:
+  test: "This is an error message."
+titles:
+  test: "This is a UI title."

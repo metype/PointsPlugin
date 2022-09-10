@@ -1,10 +1,12 @@
 package mc.metype.points;
 
-import jdk.jfr.internal.LogLevel;
+import mc.metype.points.commands.PointsCommand;
+import mc.metype.points.commands.subcommands.BalanceSubCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
 import java.util.logging.Level;
 
 public final class Points extends JavaPlugin implements Listener {
@@ -12,10 +14,7 @@ public final class Points extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
-            /*
-             * We register the EventListener here, when PlaceholderAPI is installed.
-             * Since all events are in the main class (this class), we simply use "this"
-             */
+            new PlaceholderAPIExpansion().register();
             Bukkit.getPluginManager().registerEvents(this, this);
         } else {
             /*
@@ -25,6 +24,11 @@ public final class Points extends JavaPlugin implements Listener {
             getLogger().log(Level.SEVERE, "Could not find PlaceholderAPI! This plugin is required.");
             Bukkit.getPluginManager().disablePlugin(this);
         }
+
+        PointsCommand pointsCommand = new PointsCommand();
+        pointsCommand.registerCommand("balance", new BalanceSubCommand());
+
+        Objects.requireNonNull(getCommand("points")).setExecutor(pointsCommand);
     }
 
     @Override

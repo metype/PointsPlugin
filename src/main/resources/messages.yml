@@ -1,8 +1,13 @@
 info:
   test: "This is an informational message."
+  player_balance: "%points.prefix% §aYou have §f%points.balance% §apoints."
 warning:
   test: "This is a warning message."
+  subcommand_not_found: "%points.prefix% §cInvalid subcommand."
+  only_for_players: "%points.prefix% §cThis command is only available for players."
+  only_for_console: "%points.prefix% §cThis command is only available for the console."
 error:
   test: "This is an error message."
 titles:
   test: "This is a UI title."
+prefix: "§7[§6Points§7]"

@@ -17,7 +17,7 @@ public class PointsConfig {
         if(!file.exists()) {
             try {
                 if(!file.createNewFile()) {
-                    throw new IOException("Failed to create config file for Points/points.yml");
+                    throw new IOException("Failed to create config file for 'Points/points.yml'");
                 }
             } catch (IOException e) {
                 e.printStackTrace();

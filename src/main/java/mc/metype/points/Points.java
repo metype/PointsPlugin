@@ -2,6 +2,8 @@ package mc.metype.points;
 
 import mc.metype.points.commands.PointsCommand;
 import mc.metype.points.commands.subcommands.BalanceSubCommand;
+import mc.metype.points.files.MessagesConfig;
+import mc.metype.points.files.PointsConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -29,6 +31,9 @@ public final class Points extends JavaPlugin implements Listener {
         pointsCommand.registerCommand("balance", new BalanceSubCommand());
 
         Objects.requireNonNull(getCommand("points")).setExecutor(pointsCommand);
+
+        PointsConfig.setup(this);
+        MessagesConfig.setup(this);
     }
 
     @Override

@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class PointsCommand implements CommandExecutor {
 
-    private Map<String, SubCommand> commands = new HashMap<>();
+    private final Map<String, SubCommand> commands = new HashMap<>();
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {

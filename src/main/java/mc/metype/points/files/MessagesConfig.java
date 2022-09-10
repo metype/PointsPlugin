@@ -1,22 +1,23 @@
 package mc.metype.points.files;
 
-import java.io.File;
-import java.io.IOException;
-
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class PointsConfig {
+import java.io.File;
+import java.io.IOException;
+
+
+public class MessagesConfig {
 
     private static File file;
     private static FileConfiguration customFile;
 
     public static void setup(JavaPlugin plugin) {
-        file = new File(plugin.getDataFolder(), "points.yml");
+        file = new File(plugin.getDataFolder(), "messages.yml");
         if (!file.exists()) {
             boolean a = file.getParentFile().mkdirs();
-            plugin.saveResource("points.yml", false);
+            plugin.saveResource("messages.yml", false);
         }
 
         customFile = YamlConfiguration.loadConfiguration(file);

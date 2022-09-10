@@ -6,12 +6,11 @@ import org.bukkit.entity.Player;
 import me.clip.placeholderapi.PlaceholderAPI;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 public class MessageParser {
 
-    static ArrayList<String> specialCaseKeys = new ArrayList<String>(Collections.singleton("prefix"));
+    static ArrayList<String> specialCaseKeys = new ArrayList<>(Collections.singleton("prefix"));
 
     public static String parseMessage(String key, Player player){
         if(specialCaseKeys.contains(key)) {

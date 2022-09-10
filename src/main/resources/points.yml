@@ -1,0 +1,5 @@
+point_earning:
+  interval:
+    per_interval: 5 # The amount of points to award per interval
+    interval: 60    # The amount of second between point awards
+    enabled: true   # Whether to have this earning scheme enabled.

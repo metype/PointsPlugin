@@ -17,7 +17,7 @@ public class MessagesConfig {
         file = new File(plugin.getDataFolder(), "messages.yml");
         if (!file.exists()) {
             boolean a = file.getParentFile().mkdirs();
-            plugin.saveResource("messages.yml", false);
+            plugin.saveResource("messages.yml", true);
         }
 
         customFile = YamlConfiguration.loadConfiguration(file);

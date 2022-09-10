@@ -1,13 +1,17 @@
 info:
-  test: "This is an informational message."
-  player_balance: "%points.prefix% §aYou have §f%points.balance% §apoints."
+  player_balance: "%points_prefix% §aYou have §f%points_balance% §apoints."
+  other_player_balance: "%points_prefix% §6%points_user% §ahas §f%points_balance% §apoints."
+  set_player_balance: "%points_prefix% §aSet §6%points_user%'s §abalance to §f%points_balance%."
 warning:
-  test: "This is a warning message."
-  subcommand_not_found: "%points.prefix% §cInvalid subcommand."
-  only_for_players: "%points.prefix% §cThis command is only available for players."
-  only_for_console: "%points.prefix% §cThis command is only available for the console."
+  subcommand_not_found: "%points_prefix% §cInvalid subcommand."
+  only_for_players: "%points_prefix% §cThis command is only available for players."
+  only_for_console: "%points_prefix% §cThis command is only available for the console."
 error:
-  test: "This is an error message."
-titles:
-  test: "This is a UI title."
+  invalid_arguments:
+    generic: "%points_prefix% §cInvalid argument."
+    NAN : "%points_prefix% §c%points_error_args% is not a valid number."
+  invalid_user : "%points_prefix% §c%points_error_args% is not a valid user."
+  general_failure: "%points_prefix% §cCommand failed."
+title:
+  points_menu : "§2Points Menu"
 prefix: "§7[§6Points§7]"

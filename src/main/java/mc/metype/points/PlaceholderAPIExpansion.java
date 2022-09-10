@@ -3,6 +3,8 @@ package mc.metype.points;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
 
+import java.util.Formatter;
+
 public class PlaceholderAPIExpansion extends PlaceholderExpansion {
 
     @Override
@@ -26,9 +28,16 @@ public class PlaceholderAPIExpansion extends PlaceholderExpansion {
             return MessageParser.parseMessage("prefix", null);
         }
         if(params.equalsIgnoreCase("balance")) {
-            if(p != null) return System.out.format("%,d", PointsBalanceHandler.GetPointsBalance(p.getUniqueId())).toString();
+            if(p != null) return (new Formatter().format("%,d", PointsBalanceHandler.GetPoints(p.getUniqueId()))).toString();
 
             return "0";
+        }
+        if(params.equalsIgnoreCase("error_args")) {
+            return Points.errorArgs;
+        }
+        if(params.equalsIgnoreCase("user")) {
+            if(p == null) return "CONSOLE";
+            return p.getName();
         }
         return super.onRequest(p, params);
     }

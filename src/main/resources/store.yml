@@ -1,0 +1,65 @@
+store:
+  survival:
+    items:
+      gold:
+        price: 500
+        name: 64 Gold Ingots
+        command: give %points_user% gold_ingot 64
+        description: Purchase a stack of Gold Ingots.
+        material:
+          ==: org.bukkit.inventory.ItemStack
+          v: 3120
+          type: GOLD_INGOT
+      steak:
+        price: 50
+        name: 64 Steak
+        command: give %points_user% cooked_beef 64
+        description: Purchase a stack of Steak.
+        material:
+          ==: org.bukkit.inventory.ItemStack
+          v: 3120
+          type: COOKED_BEEF
+      name: Items
+      description: Survival items.
+      material:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3120
+        type: GOLD_BLOCK
+    commands:
+      fly:
+        price: 10000
+        name: Fly
+        command: give %points_user% cooked_beef 64
+        description: Purchase a stack of Steak.
+        material:
+          ==: org.bukkit.inventory.ItemStack
+          v: 3120
+          type: FEATHER
+      name: Commands
+      description: Survival commands.
+      material:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3120
+        type: GOLD_BLOCK
+    name: Survival
+    description: Survival things.
+    material:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3120
+      type: GOLD_BLOCK
+  fun:
+    kill:
+      price: 10
+      name: Suicide
+      command: kill %points_user%
+      description: Kill yourself.
+      material:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3120
+        type: ANVIL
+    name: Fun
+    description: Silly things.
+    material:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3120
+      type: GOLD_BLOCK

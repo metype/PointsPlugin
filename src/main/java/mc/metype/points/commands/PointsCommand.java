@@ -44,7 +44,7 @@ public class PointsCommand implements CommandExecutor, TabCompleter {
             for(String commandName : commands.keySet()) {
                 if(args.length == 0) {
                     tabCompletions.add(commandName);
-                } else if (commandName.contains(args[0])) {
+                } else if (commandName.startsWith(args[0])) {
                     tabCompletions.add(commandName);
                 }
             }

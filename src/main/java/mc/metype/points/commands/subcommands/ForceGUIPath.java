@@ -18,7 +18,7 @@ public class ForceGUIPath extends SubCommand{
             sender.sendMessage(MessageParser.parseMessage("warning.only_for_players", null));
             return true;
         }
-        if(!GUIHandler.handlePath(args[1], ((Player)sender).getUniqueId())) {
+        if(!GUIHandler.handlePath(args[1], ((Player)sender).getUniqueId(), null)) {
             sender.sendMessage(MessageParser.parseMessage("error.general_failure", null));
         }
         return true;

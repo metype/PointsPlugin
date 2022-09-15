@@ -3,9 +3,12 @@ package mc.metype.points.commands.subcommands;
 import mc.metype.points.MessageParser;
 import mc.metype.points.Points;
 import mc.metype.points.PointsBalanceHandler;
+import mc.metype.points.files.PointsConfig;
+import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SetSubCommand extends SubCommand{
